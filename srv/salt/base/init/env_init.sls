@@ -8,3 +8,4 @@ include:
   - init.pkg
   - init.date
   - init.zabbix_agent
+  - init.append_ext4
