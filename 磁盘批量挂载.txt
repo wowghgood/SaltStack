@@ -5,6 +5,7 @@ saltstack默认不支持ext4分区
 
 
 执行如下命令，将所有minion的vdb磁盘进行分区、格式化、挂载
+（系统初始化操作后，已自动生成了data目录）
 salt '*' partition.mklabel /dev/vdb msdos
 salt '*' partition.mkpart /dev/vdb primary fs_type=ext4 start=0% end=100%
 salt '*' partition.mkfs /dev/vdb ext4
