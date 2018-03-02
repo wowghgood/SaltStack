@@ -1,0 +1,12 @@
+saltstack默认不支持ext4分区
+
+修改/usr/lib/python2.7/site-packages/salt/modules/parted.py
+在mkfs和mklabel两口函数中加入ext4类型，使saltstack支持对ext4的操作
+（在初始化环境中，已包含了/Users/Administrator/Desktop/SaltStack/srv/salt/base/init/append_ext4.sls）
+
+直接执行如下命令，将所有minion的vdb磁盘进行分区、格式化、挂载
+salt '*' partition.mklabel /dev/vdb msdos
+salt '*' partition.mkpart /dev/vdb primary fs_type=ext4 start=0% end=100%
+salt '*' partition.mkfs /dev/vdb ext4
+salt '*' mount.mount /data  /dev/vdb Ture
+salt '*' mount.set_fstab /data /dev/vdb ext4
