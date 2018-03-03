@@ -25,7 +25,7 @@ add-service:
     - group: root
     - mode: 755
   cmd.run:
-    - name: chkconfig --add nginx && chkconfig nginx on
+    - name: chkconfig --add nginx
     - unless: chkconfig --list | grep nginx
     - require:
       - file: add-service
