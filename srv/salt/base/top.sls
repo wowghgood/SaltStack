@@ -2,5 +2,8 @@ base:
   '*':
     - init.env_init
 prod:
-  'Saltstack-Master':
-    - nginx.pkg
+  'Nginx-Proxy_*':
+    - nginx.install
+  'Nginx-app_*'
+    - nginx.install
+    - php.install

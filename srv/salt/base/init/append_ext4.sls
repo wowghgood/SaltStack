@@ -4,3 +4,5 @@
     - user: root
     - group: root
     - mode: 644
+  cmd.run:
+    - name: mkdir -p /data/application /data/log /data/script /data/pkg
