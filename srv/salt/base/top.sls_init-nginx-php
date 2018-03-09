@@ -1,7 +1,0 @@
-base:
-  '*':
-    - init.env_init
-prod:
-  '*':
-    - nginx.install
-    - php.install

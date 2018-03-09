@@ -1,0 +1,7 @@
+prod:
+  'nginx-app*':
+    - nginx.install
+    - php.install
+    - nginx.conf
+    - nginx.cert
+    - nginx.service
