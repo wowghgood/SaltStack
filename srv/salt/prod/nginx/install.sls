@@ -29,9 +29,3 @@ add-service:
     - unless: chkconfig --list | grep nginx
     - require:
       - file: add-service
-
-service-running:
-  cmd.run:
-    - name : service nginx start
-    - require:
-      - cmd: add-service
