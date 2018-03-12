@@ -1,0 +1,14 @@
+127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
+::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
+192.168.1.202	Saltstack-Master
+192.168.1.183	nginx-01
+192.168.1.184	nginx-02
+192.168.1.185	tomcat-01
+192.168.1.186	tomcat-02
+192.168.1.188	mysql-01
+192.168.1.189	mysql-02
+192.168.1.190	zabbix_VPN
+192.168.1.191	admin_channel
+192.168.1.210	Codis-01
+192.168.1.211	Codis-02
+192.168.1.212	Codis-03

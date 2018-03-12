@@ -7,5 +7,6 @@ include:
   - init.selinux
   - init.pkg
   - init.date
+  - init.hosts
   - init.zabbix_agent
   - init.append_ext4
